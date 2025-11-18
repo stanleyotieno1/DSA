@@ -12,16 +12,20 @@ class Node{
 public class Main{
     public static void main (String[] args){
         Node head = new Node(10);
-
         head.next = new Node(20);
-
         head.next.next = new Node(30);
-
-        while(head != null){
-            System.out.println(head.data + " ");
-            head = head.next;
-        }
-
+        head.next.next.next = new Node(40);
+        traverselList(head);
 
     }
+
+    public static void traverselList(Node head){
+        while(head.next != null){
+            System.out.println(head.data);
+            if (head.next != null){
+                head = head.next;
+            }
+        }
+    }
+
 }

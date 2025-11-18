@@ -15,17 +15,20 @@ public class Main{
         head.next = new Node(20);
         head.next.next = new Node(30);
         head.next.next.next = new Node(40);
-        traverselList(head);
-
+        recursiveTraverseListNode(head);
     }
 
     public static void traverselList(Node head){
         while(head.next != null){
             System.out.println(head.data);
-            if (head.next != null){
-                head = head.next;
-            }
+            head = head.next;
         }
     }
-
+    static void recursiveTraverseListNode(Node head){
+        if(head == null){
+            return;
+        }
+        System.out.println(head.data);
+        traverselList(head.next);
+    }
 }

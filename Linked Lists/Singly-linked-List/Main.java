@@ -16,6 +16,8 @@ public class Main{
         head.next.next = new Node(30);
         head.next.next.next = new Node(40);
         recursiveTraverseListNode(head);
+
+        //traverserList(head);  can be inplemented for the iterattive approach
     }
 
     public static void traverselList(Node head){
@@ -24,6 +26,10 @@ public class Main{
             head = head.next;
         }
     }
+
+    // recursive function
+    //time complexity O(n)
+    //space complexity O(n)
     static void recursiveTraverseListNode(Node head){
         if(head == null){
             return;
